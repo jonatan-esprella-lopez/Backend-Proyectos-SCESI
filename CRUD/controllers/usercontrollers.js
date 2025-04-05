@@ -1,10 +1,6 @@
-const User = require('../models/userModel');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const { validationResult } = require('express-validator');
+const User = require('../models/user.model');
 
-
-const getUsers = (req, res) => {
+const getAllUsers = (req, res) => {
     try {
         const users = User.find();
         if (!users) {
@@ -17,7 +13,7 @@ const getUsers = (req, res) => {
     }
 }
 
-const getUser = (req, res) => {
+const getUserById = (req, res) => {
     try {
         res.status(200).json({ message: "Get User" });
     }
@@ -54,8 +50,8 @@ const deleteUser = (req, res) => {
 }
 
 module.exports = {
-    getUsers,
-    getUser,
+    getAllUsers,
+    getUserById,
     createUser,
     updateUser,
     deleteUser
