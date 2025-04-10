@@ -22,6 +22,20 @@ const getUserById = (req, res) => {
     }
 }
 
+const getUserByEmail = (req, res) => {
+    try {
+        res.status(200).json({ message: "Get User by Email" });
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+
+
+
+
+
 const updateUser = (req, res) => {
     try {
         res.status(200).json({ message: "Update User" });

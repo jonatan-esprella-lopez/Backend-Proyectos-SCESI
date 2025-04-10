@@ -18,3 +18,4 @@ router.post ('/resetpassword', resetPassword);
 router.post ('/verifytoken', verifyToken);
 router.post ('/refreshtoken', refreshToken);
 
+module.exports = router;
