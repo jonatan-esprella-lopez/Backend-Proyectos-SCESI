@@ -22,15 +22,6 @@ const getUserById = (req, res) => {
     }
 }
 
-const createUser = (req, res) => {
-    try {
-        res.status(201).json({ message: "Create User" });
-    }
-    catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-}
-
 const updateUser = (req, res) => {
     try {
         res.status(200).json({ message: "Update User" });
@@ -52,7 +43,6 @@ const deleteUser = (req, res) => {
 module.exports = {
     getAllUsers,
     getUserById,
-    createUser,
     updateUser,
     deleteUser
 }
