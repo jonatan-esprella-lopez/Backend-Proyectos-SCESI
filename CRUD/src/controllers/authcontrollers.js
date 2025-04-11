@@ -22,7 +22,25 @@ const createUser = async (req, res) => {
 }
 
 const loginUser = async (req, res) => {
+    try{
+        const { email, password } = req.body;
+        
+        const dataEmail = await User.findOne({ email });
 
+        if (dataEmail) {
+            const isPasswordValid = await bcrypt.compare(password, dataEmail.password);
+            if (isPasswordValid) {
+                res.status(200).json({ message: "Credenciales ingresados correctamente" });
+            } else {
+                res.status(401).json({ message: "Contraseña incorrecta" });
+            }
+        } else {
+            res.status(404).json({ message: "Usuario no encontrado" });
+        }
+
+    }catch{
+        res.status(500).json({ message: error.message });
+    }
 }
 
 const logoutUser = async (req, res) => {
