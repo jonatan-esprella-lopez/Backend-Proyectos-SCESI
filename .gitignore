@@ -1,0 +1,15 @@
+# Node
+node_modules/
+dist/
+build/
+
+*.log
+*.tmp
+*CRUD/.env*
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+CRUD/.env
+CRUD/.env
