@@ -5,9 +5,11 @@ build/
 
 *.log
 *.tmp
-*.env
-
+*CRUD/.env*
+.env
 
 # OS files
 .DS_Store
 Thumbs.db
+CRUD/.env
+CRUD/.env
