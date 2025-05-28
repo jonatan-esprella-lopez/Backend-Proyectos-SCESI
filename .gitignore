@@ -5,7 +5,7 @@ build/
 
 *.log
 *.tmp
-.env
+*.env
 
 
 # OS files
