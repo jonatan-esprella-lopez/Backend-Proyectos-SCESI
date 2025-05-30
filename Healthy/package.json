@@ -1,17 +1,27 @@
 {
   "name": "healthy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Es la aplicación de backend para el proyecto Healthy, que proporciona una API RESTful para gestionar la información de salud y bienestar.",
+  "main": "index.ts",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/index.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jonatan Esprella Lopez",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
   }
 }

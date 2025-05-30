@@ -1,9 +1,6 @@
-const express = require('express');
-const app = express();
+import { Request, Response } from 'express';
 
-const PORT = 3000;
-
-app.get('/health', (_req, res) => {
+const healthy = (_req: Request, res: Response) => {
     try {
         res.status(200).json({
             healt: 'healthy',
@@ -18,8 +15,8 @@ app.get('/health', (_req, res) => {
         });
     }
 
-});
+};
 
-app.listen(PORT, () => {
-    console.log(`Health check service running on http://localhost:${PORT}/health`);
-});
+module.exports = {
+    healthy
+};
