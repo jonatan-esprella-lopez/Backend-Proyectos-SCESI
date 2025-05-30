@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-const healthy = (_req: Request, res: Response) => {
+export const healthy = (_req: Request, res: Response) => {
     try {
         res.status(200).json({
             healt: 'healthy',
