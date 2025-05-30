@@ -17,10 +17,13 @@ app.use(cors({
 
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const ProductRoutes = require('./routes/productRoutes.ts');
+
 const PORT = process.env.PORT;
 
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/products', ProductRoutes);
 
 
 app.listen(PORT, () => {
